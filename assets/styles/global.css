@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --primary-color: rgb(2, 203, 22);
+    --dark-color: #07022e;
+    --light-color: #fff;
+}
+
+/* Inner Content*/
+
+.inner-content{
+    position: relative;
+    max-width: 1200px;
+    padding-inline: 1rem;
+    margin-inline: auto
+}
+
+body{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: inherit;
+}
+.btn{
+    background-color: var(--primary-color);
+    padding: 0.8rem 1rem;
+    min-width: 120px;
+    display: inline-block;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #fff;
+    text-align: center;
+}
+
+
+.btn:hover{
+    background-color: #004cbe;
+}
+
+image{
+    position: relative;
+    max-width: 100%;
+}
+nav{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    box-shadow: 0px 5px 10px #ffffff30;
+}
+
+nav .inner-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo span{
+    color: var(--primary-color);
+}
+/******************************* Início Nav **********************************/
+nav ul{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+nav ul li:hover {
+    color: var(--primary-color) !important;
+    transition: all 0.3s;
+    transform: translateY(-4px);
+}
+nav ul.social-icons li{
+    font-size: 1.5rem;
+}
+
+/*******************************Fim  Nav***********************************/
+
+
+/*******************************Inicio Header**********************************/
+header{
+    position: relative;
+    display: block;
+    padding-block: 2rem;
+}
+header .inner-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center;
+    min-height: 60vh;
+}
+header .left-side{
+    display: grid;
+    gap: 1rem;
+}
+
+header .left-side h2{
+    font-size: 3rem;
+}header .left-side h2 span{
+    color: var(--primary-color);
+}
+
+header .left-side .links{
+    display: flex;
+    gap: 1rem;
+}
+
+header .right-side{
+    display: flex;
+    justify-content: right;
+    
+}
+header .right-side img{
+    max-width: 400px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 2px solid#11f;
+}
+
+/*******************************Fim Header**********************************/
+
+
+/******************************* Início do Menu**********************************/
+
+main{
+    position: relative;
+}
+.section-title{
+    text-align: center;
+}
+.section-title.primary span{
+    color: var(--dark-color);
+}
+main img{
+    background-color: #fff;
+}
+#services{
+    background-color: var(--primary-color);
+    padding-block: 2rem;
+}
+#services .services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+#services .services .service{
+    background-color: var(--dark-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+#services .services .service img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+#services .services .service h3{
+    padding: 0.5rem;
+}
+/****    padding: 1rem;
+***************************Fim do Menu**********************************/
