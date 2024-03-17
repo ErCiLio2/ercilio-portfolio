@@ -44,7 +44,7 @@ a {
 
 
 .btn:hover{
-    background-color: #004cbe;
+    background-color: rgb(5, 130, 17);
 }
 
 image{
@@ -59,6 +59,7 @@ nav{
 
 nav .inner-content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
 }
@@ -74,6 +75,7 @@ nav .inner-content{
 /******************************* Início Nav **********************************/
 nav ul{
     display: flex;
+    
     gap: 1rem;
     align-items: center;
 }
@@ -94,7 +96,7 @@ nav ul.social-icons li{
 header{
     position: relative;
     display: block;
-    padding-block: 2rem;
+    padding-block: 3rem;
 }
 header .inner-content{
     display: grid;
@@ -125,10 +127,13 @@ header .right-side{
     
 }
 header .right-side img{
-    max-width: 400px;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 350px;
     border-radius: 50%;
     padding: 1rem;
-    border: 2px solid#11f;
+    border: 2px solid var(--primary-color);
 }
 
 /*******************************Fim Header**********************************/
@@ -152,24 +157,158 @@ main img{
     background-color: var(--primary-color);
     padding-block: 2rem;
 }
-#services .services{
+.services{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     padding-top: 1rem;
 }
-#services .services .service{
+.services .service{
     background-color: var(--dark-color);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 8px;
 }
-#services .services .service img{
+.services .service img{
     width: 100%;
     border-radius: 8px;
 }
 
-#services .services .service h3{
+.services .service h3{
     padding: 0.5rem;
 }
-/****    padding: 1rem;
-***************************Fim do Menu**********************************/
+
+.icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#projetos{
+    background-color: #fff;
+    padding-block: 2rem;
+}
+#projetos h3{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+#projetos .services .service{
+    padding: 1rem;
+    border-radius: 8px;
+}
+#projetos .primary{
+    color: var(--primary-color);
+
+}
+#habilidades{
+    padding-block: 2rem;
+}
+#habilidades h2 span{
+    color: var(--primary-color);
+}
+
+#habilidades h3{
+    text-transform: uppercase;
+    text-align: center;
+}
+#habilidades i{
+    font-size: 100px;
+    margin-inline: auto;
+    color: var(--primary-color);
+}
+
+/*******************************Fim do Menu**********************************/
+#copyright{
+    color: var(--primary-color);
+    padding-block: 3rem;
+}
+#contacto{
+    background-color: var(--primary-color);
+}
+#contacto .inner-content{
+    padding-block: 2rem;
+    border: transparent;
+    padding-inline: 2rem;
+}
+
+#contacto form .campos{
+    position: relative;
+    max-width:  900px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    margin-inline: auto;
+    justify-content: center!important;
+    text-align: center;
+}
+#contacto form .btn{
+    border: transparent;
+    padding-inline: 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color)
+}
+#contacto form .row-btn{
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+#contacto .input-group{
+    all: unset;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 5px;
+    align-items: start;
+}
+
+footer .input-group input{
+    padding: .8rem;
+    border: 1px solid transparent;
+    box-shadow: 0px 3px 2px #08013d23;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+#contacto form textarea{
+    padding: .8rem;
+    border: 1px solid transparent;
+    box-shadow: 0px 3px 2px #08013d33;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+/*******************************Inicio do Responsivo**********************************/
+@media screen and (max-width: 800px) {
+    
+    
+}
+
+@media screen and (max-width: 680px) {
+    
+     .services{
+        grid-template-columns: 1fr 1fr;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    nav .logo{
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    header .inner-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    header .right-side{
+        grid-row: 1;
+        justify-content: center;
+    }
+}
+/*******************************Fim do Responsivo**********************************/
