@@ -400,9 +400,14 @@
                 <div class="inner-content">
                     <p data-i18n="cv.sub">Quer saber mais?</p>
                     <h2 data-i18n="cv.title">Baixe o meu currículo completo</h2>
-                    <a href="./assets/Ercilio_Julio_CV_Engineer.pdf" target="_blank" class="btn">
-                        <i class="fa-solid fa-download"></i> <span data-i18n="cv.btn">Baixar Currículo PDF</span>
-                    </a>
+                    <div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;">
+                        <a href="./assets/Ercilio_Julio_CV_Engineer.pdf" target="_blank" class="btn">
+                            <i class="fa-solid fa-download"></i> <span data-i18n="cv.btn">Baixar Currículo PDF</span>
+                        </a>
+                        <a href="./cv.html" target="_blank" class="btn btn-outline" id="cvOnlineBtn">
+                            <i class="fa-solid fa-eye"></i> <span data-i18n="cv.view">Ver CV Online</span>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
@@ -494,7 +499,7 @@
             'cert1':'Administração de Sistemas Linux','cert2':'Programação Web',
             'cert5':'Informática na Óptica do Utilizador','cert6':'Hardware e Software',
             'ev1':'Mai 2024 · SOMATEC','ev2':'Ago 2024 · SOMATEC',
-            'cv.sub':'Quer saber mais?','cv.title':'Baixe o meu currículo completo','cv.btn':'Baixar Currículo PDF',
+            'cv.sub':'Quer saber mais?','cv.title':'Baixe o meu currículo completo','cv.btn':'Baixar Currículo PDF','cv.view':'Ver CV Online',
             'ct.title1':'Entre','ct.title2':'em Contacto',
             'ct.sub':'Disponível para projectos freelance, colaborações ou oportunidades de emprego.',
             'ct.location':'Luanda, Angola',
@@ -547,7 +552,7 @@
             'cert1':'Linux Systems Administration','cert2':'Web Programming',
             'cert5':'IT for End Users','cert6':'Hardware and Software',
             'ev1':'May 2024 · SOMATEC','ev2':'Aug 2024 · SOMATEC',
-            'cv.sub':'Want to know more?','cv.title':'Download my full CV','cv.btn':'Download CV PDF',
+            'cv.sub':'Want to know more?','cv.title':'Download my full CV','cv.btn':'Download CV PDF','cv.view':'View CV Online',
             'ct.title1':'Get','ct.title2':'in Touch',
             'ct.sub':'Available for freelance projects, collaborations or employment opportunities.',
             'ct.location':'Luanda, Angola',
@@ -569,6 +574,8 @@
           });
           document.documentElement.lang = l;
           document.getElementById('langBtn').textContent = l === 'pt' ? 'EN' : 'PT';
+          const cvBtn = document.getElementById('cvOnlineBtn');
+          if (cvBtn) cvBtn.href = l === 'pt' ? './cv.html' : './cv-en.html';
           lang = l;
           localStorage.setItem('pf-lang', l);
         }
