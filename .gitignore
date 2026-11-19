@@ -6,3 +6,9 @@ CLAUDE.local.md
 # OS
 .DS_Store
 Thumbs.db
+
+# Ficheiros pessoais/sensíveis
+bi/
+foto_passe.JPG
+transcript.pdf
+*.zip
