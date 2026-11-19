@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ercílio Teixeira Júlio — CV TI &amp; Admin 2026 (Sidebar)</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --navy: #1b2a4a;
+        --navy-light: #243459;
+        --blue: #3b82f6;
+        --teal: #14b8a6;
+        --text: #1e293b;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --bg: #f8fafc;
+        --sidebar-w: 30%;
+        --main-w: 70%;
+      }
+
+      html {
+        font-size: 9pt;
+      }
+
+      body {
+        font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background: #fff;
+        width: 210mm;
+        margin: 0 auto;
+        min-height: 297mm;
+        display: flex;
+        line-height: 1.45;
+      }
+
+      /* ── SIDEBAR ── */
+      .sidebar {
+        width: var(--sidebar-w);
+        min-width: var(--sidebar-w);
+        background: var(--navy);
+        color: #e2e8f0;
+        padding: 1.6rem 1.1rem 1.6rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+      }
+
+      .sb-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.015em;
+        line-height: 1.25;
+      }
+
+      .sb-title {
+        font-size: 0.75rem;
+        color: #93c5fd;
+        font-weight: 500;
+        margin-top: 0.25rem;
+        line-height: 1.4;
+      }
+
+      .sb-divider {
+        border: none;
+        border-top: 1px solid #2e4270;
+        margin: 0;
+      }
+
+      .sb-section-title {
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #60a5fa;
+        margin-bottom: 0.45rem;
+      }
+
+      /* Contacts */
+      .sb-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .sb-contact-item {
+        font-size: 0.72rem;
+        color: #cbd5e1;
+        line-height: 1.4;
+        word-break: break-all;
+      }
+
+      .sb-contact-item a {
+        color: #93c5fd;
+        text-decoration: none;
+      }
+
+      .sb-contact-label {
+        display: block;
+        font-size: 0.6rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.08rem;
+      }
+
+      /* Skills in sidebar */
+      .sb-skill-group {
+        margin-bottom: 0.65rem;
+      }
+
+      .sb-skill-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .sb-skill-cat {
+        font-size: 0.63rem;
+        font-weight: 700;
+        color: var(--teal);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.2rem;
+      }
+
+      .sb-skill-list {
+        font-size: 0.71rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
+
+      .sb-skill-list span {
+        color: #94a3b8;
+      }
+
+      /* Languages */
+      .sb-lang {
+        font-size: 0.72rem;
+        color: #cbd5e1;
+        line-height: 1.65;
+      }
+
+      .sb-lang strong {
+        color: #e2e8f0;
+      }
+
+      /* Education in sidebar */
+      .sb-edu-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .sb-edu-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .sb-edu-inst {
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: #e2e8f0;
+        line-height: 1.3;
+      }
+
+      .sb-edu-degree {
+        font-size: 0.69rem;
+        color: #93c5fd;
+        margin-top: 0.05rem;
+      }
+
+      .sb-edu-period {
+        font-size: 0.65rem;
+        color: #64748b;
+      }
+
+      /* ── MAIN ── */
+      .main {
+        flex: 1;
+        padding: 1.4rem 1.6rem 1.4rem 1.3rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      section {
+        margin-bottom: 0.95rem;
+      }
+
+      h2 {
+        font-size: 0.63rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--blue);
+        border-bottom: 1.5px solid var(--line);
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.55rem;
+      }
+
+      /* Summary */
+      .summary p {
+        font-size: 0.84rem;
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      /* Experience */
+      .exp-item {
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .exp-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .exp-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 0.06rem;
+      }
+
+      .exp-org {
+        font-weight: 700;
+        font-size: 0.86rem;
+        color: var(--navy);
+        line-height: 1.3;
+      }
+
+      .exp-period {
+        font-size: 0.72rem;
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .exp-role {
+        font-size: 0.78rem;
+        color: var(--teal);
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+      }
+
+      .exp-item ul {
+        padding-left: 0.9rem;
+      }
+
+      .exp-item ul li {
+        font-size: 0.79rem;
+        color: var(--text);
+        margin-bottom: 0.08rem;
+        line-height: 1.5;
+        list-style: disc;
+      }
+
+      .exp-item ul li strong {
+        color: var(--navy);
+      }
+
+      /* Projects */
+      .proj-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .proj-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.5rem;
+      }
+
+      .proj-name {
+        font-weight: 700;
+        font-size: 0.84rem;
+        color: var(--navy);
+      }
+
+      .proj-status {
+        font-size: 0.7rem;
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .proj-stack {
+        font-size: 0.7rem;
+        color: var(--blue);
+        margin-bottom: 0.08rem;
+        font-weight: 500;
+      }
+
+      .proj-desc {
+        font-size: 0.79rem;
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      /* Certifications */
+      .certs {
+        font-size: 0.78rem;
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      /* PRINT */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .sidebar {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .exp-item,
+        .proj-item {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+      <div>
+        <div class="sb-name">Ercílio<br />Teixeira Júlio</div>
+        <div class="sb-title">
+          Técnico Sénior de TI<br />Full Stack Engineer &amp; DevOps
+        </div>
+      </div>
+
+      <hr class="sb-divider" />
+
+      <div>
+        <div class="sb-section-title">Contacto</div>
+        <div class="sb-contacts">
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">Email</span>
+            erciliociu@gmail.com
+          </div>
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">Telefone</span>
+            +244 973 087 388
+          </div>
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">Localização</span>
+            Luanda, Angola
+          </div>
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/erciliojulio"
+              >linkedin.com/in/erciliojulio</a
+            >
+          </div>
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">GitHub</span>
+            <a href="https://github.com/ErCiLio2">github.com/ErCiLio2</a>
+          </div>
+          <div class="sb-contact-item">
+            <span class="sb-contact-label">Portfolio</span>
+            <a href="https://ercilio2.github.io/ercilio-portfolio/"
+              >ercilio2.github.io/ercilio-portfolio</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <hr class="sb-divider" />
+
+      <div>
+        <div class="sb-section-title">Competências</div>
+
+        <div class="sb-skill-group">
+          <div class="sb-skill-cat">TI &amp; Suporte</div>
+          <div class="sb-skill-list">
+            Hardware · Impressoras<br />
+            Windows / Linux / Server<br />
+            Redes TCP/IP · DNS · DHCP<br />
+            VMware · Proxmox · VirtualBox<br />
+            AnyDesk · TeamViewer · SSH<br />
+            Suporte N1/N2 · GPO · Backups
+          </div>
+        </div>
+
+        <div class="sb-skill-group">
+          <div class="sb-skill-cat">Ferramentas Negócio</div>
+          <div class="sb-skill-list">
+            ERP Primavera (Mkt &amp; Vendas)<br />
+            Word · Excel · PowerPoint<br />
+            Microsoft Teams · Ticketing<br />
+            Inventário TI · SLAs
+          </div>
+        </div>
+
+        <div class="sb-skill-group">
+          <div class="sb-skill-cat">DevOps &amp; Infra</div>
+          <div class="sb-skill-list">
+            Docker · Nginx · Traefik<br />
+            PostgreSQL · Redis · MinIO<br />
+            GitHub Actions · Cloudflare<br />
+            Bash · Python · Sentry
+          </div>
+        </div>
+
+        <div class="sb-skill-group">
+          <div class="sb-skill-cat">Desenvolvimento</div>
+          <div class="sb-skill-list">
+            NestJS · FastAPI · Laravel<br />
+            React · Next.js · SvelteKit<br />
+            TypeScript · Python · PHP · Go<br />
+            Flutter · React Native
+          </div>
+        </div>
+      </div>
+
+      <hr class="sb-divider" />
+
+      <div>
+        <div class="sb-section-title">Formação</div>
+        <div class="sb-edu-item">
+          <div class="sb-edu-inst">IPAS Zango Zero</div>
+          <div class="sb-edu-degree">
+            Técnico Médio em Informática de Gestão
+          </div>
+          <div class="sb-edu-period">2021 – 2025</div>
+        </div>
+        <div class="sb-edu-item">
+          <div class="sb-edu-inst">42 Luanda</div>
+          <div class="sb-edu-degree">
+            Engenharia de Software · Nível 5.13/21
+          </div>
+          <div class="sb-edu-period">Set 2024 – presente</div>
+        </div>
+      </div>
+
+      <hr class="sb-divider" />
+
+      <div>
+        <div class="sb-section-title">Idiomas</div>
+        <div class="sb-lang">
+          <strong>Português</strong> — nativo<br />
+          <strong>Inglês</strong> — técnico<br />
+          <span style="font-size: 0.65rem; color: #475569"
+            >documentação · resolução de incidentes</span
+          >
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN ── -->
+    <main class="main">
+      <section class="summary">
+        <h2>Sumário Profissional</h2>
+        <p>
+          Profissional de TI com mais de 8 anos de experiência em suporte
+          técnico, administração de sistemas e gestão de parques informáticos
+          empresariais em Luanda. Competências alargadas em hardware, redes
+          TCP/IP, virtualização, servidores Linux, DNS e suporte remoto. Também
+          desenvolvedor Full Stack com historial em produção de sistemas SaaS,
+          fintech e ERP — cobrindo o ciclo completo da infraestrutura ao
+          frontend. Habituado a ambientes onde a TI suporta directamente
+          processos administrativos e operacionais.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experiência Profissional</h2>
+
+        <div class="exp-item">
+          <div class="exp-top">
+            <span class="exp-org"
+              >AS Consulting &amp; Investments · Júlios AN</span
+            >
+            <span class="exp-period">Mar 2023 – Jan 2026 · Luanda</span>
+          </div>
+          <div class="exp-role">
+            Técnico Sénior de TI · Desenvolvedor Full Stack &amp; DevOps
+          </div>
+          <ul>
+            <li>
+              Gestão integral do parque informático: inventário, manutenção
+              preventiva e correctiva de hardware, workstations e servidores.
+            </li>
+            <li>
+              Administração de redes TCP/IP, sub-redes, routing, DNS, e-mail
+              corporativo e servidores web (Nginx/Apache).
+            </li>
+            <li>
+              Instalação, configuração e manutenção de SO Windows e Linux;
+              gestão de utilizadores e permissões.
+            </li>
+            <li>
+              Suporte remoto via AnyDesk; resolução de incidentes N1/N2;
+              formação de utilizadores finais.
+            </li>
+            <li>
+              Uso de <strong>Primavera</strong> (módulo Marketing &amp; Vendas)
+              para apoio a processos administrativos e comerciais.
+            </li>
+            <li>
+              Virtualização (VMware/Proxmox) para ambientes de teste e
+              servidores internos.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-top">
+            <span class="exp-org"
+              >SOMATEC — Software Marketing e Tecnologia</span
+            >
+            <span class="exp-period">Jan 2023 – presente · Luanda</span>
+          </div>
+          <div class="exp-role">Engenheiro Full Stack Sénior</div>
+          <ul>
+            <li>
+              Desenvolvimento e manutenção de plataformas SaaS e ERP para o
+              mercado angolano (farmácia, transportes, agências de viagens).
+            </li>
+            <li>
+              Deploy e manutenção de stacks Docker em produção: PostgreSQL,
+              Redis, MinIO, Nginx, Traefik.
+            </li>
+            <li>
+              Integração com <strong>GDS Travelport</strong> (leitura de PNRs,
+              emissão de bilhetes aéreos PDF) no projecto FlyPort.
+            </li>
+            <li>
+              Administração de VPS, domínios .ao, SSL, backups e monitorização
+              com Sentry.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-top">
+            <span class="exp-org"
+              >Grupo ZonaLink &nbsp;·&nbsp; Freelance / Consultoria</span
+            >
+            <span class="exp-period">2018 – 2024 · Luanda</span>
+          </div>
+          <div class="exp-role">Técnico de TI · Consultor</div>
+          <ul>
+            <li>
+              Suporte técnico presencial e remoto, instalação de SO e software,
+              configuração de redes para clientes empresariais.
+            </li>
+            <li>
+              Desenvolvimento PHP/Laravel no Grupo ZonaLink (Jul–Set 2024).
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Realizações em Destaque</h2>
+
+        <div class="proj-item">
+          <div class="proj-top">
+            <span class="proj-name"
+              >FlyPort — SaaS para Agências de Viagens</span
+            >
+            <span class="proj-status">flyport.tech · Em produção</span>
+          </div>
+          <div class="proj-stack">
+            Django 6 · React 19 · PostgreSQL · Travelport GDS · Docker · Nginx
+          </div>
+          <div class="proj-desc">
+            SaaS B2B com integração ao <strong>GDS Travelport</strong> — leitura
+            de PNRs e emissão documental automatizada de bilhetes em PDF com
+            branding por agência. Papel: QA Engineer → Tech Leader.
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-top">
+            <span class="proj-name">MESA Platform — ERP SaaS Multi-tenant</span>
+            <span class="proj-status">SOMATEC · Em produção</span>
+          </div>
+          <div class="proj-stack">
+            NestJS · SvelteKit · PostgreSQL · Redis · Docker
+          </div>
+          <div class="proj-desc">
+            ERP para farmácias, hotéis e retalho. Inclui módulos de stock,
+            vendas, caixa e relatórios — com isolamento por schema PostgreSQL
+            por cliente.
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-top">
+            <span class="proj-name"
+              >Plataforma Fintech &amp; Gestão de Frotas</span
+            >
+            <span class="proj-status">Em produção · Angola</span>
+          </div>
+          <div class="proj-stack">
+            NestJS 11 · React · PostgreSQL · Redis · MinIO · Docker
+          </div>
+          <div class="proj-desc">
+            Plataforma de pagamentos digitais e gestão de frotas. Administração
+            da infraestrutura completa em VPS.
+          </div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-top">
+            <span class="proj-name">Gestão TI — AS Consulting / Júlios AN</span>
+            <span class="proj-status">2023 – 2026</span>
+          </div>
+          <div class="proj-desc">
+            Responsável único pelo parque informático de dois grupos
+            empresariais: estruturou rede interna, uniformizou SO, implementou
+            backups, formou utilizadores e integrou o ERP Primavera no fluxo
+            comercial.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certificações</h2>
+        <div class="certs">
+          Administração de Sistemas Linux — Udemy &nbsp;·&nbsp; Hardware e
+          Software — Centro Nelpalma &nbsp;·&nbsp; Informática na Óptica do
+          Utilizador — Centro Nelpalma &nbsp;·&nbsp; Programação Web — MundoTec
+          &nbsp;·&nbsp; Next.js App Router Fundamentals &nbsp;·&nbsp; React
+          Foundations for Next.js<br />
+          <br />
+          <strong>Eventos:</strong> Unitel Startup Summit — Mai 2024
+          &nbsp;·&nbsp; Hackathon Academia BAI — Ago 2024
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
