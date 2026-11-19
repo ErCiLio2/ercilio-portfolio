@@ -1,0 +1,8 @@
+CLAUDE.local.md
+
+# LibreOffice lock files
+.~lock.*#
+
+# OS
+.DS_Store
+Thumbs.db
