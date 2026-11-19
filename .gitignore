@@ -12,3 +12,6 @@ bi/
 foto_passe.JPG
 transcript.pdf
 *.zip
+
+# Env files com credenciais
+.env
